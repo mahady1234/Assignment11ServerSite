@@ -40,7 +40,7 @@ const client = new MongoClient(uri, {
 
 async function run() {
     try {
-        await client.connect();
+        // await client.connect();
         console.log("MongoDB Connected Successfully");
 
         const db = client.db('RedHope');
