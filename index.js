@@ -200,7 +200,7 @@ async function run() {
                 res.status(200).json({ message: 'Donation recorded', donation: newDonation });
             } catch (err) {
                 console.error(err);
-                res.status(500).json({ message: 'Failed to record ' });
+                res.status(500).json({ message: 'Failed to record donation' });
             }
         });
 
