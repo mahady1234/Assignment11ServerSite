@@ -11,13 +11,7 @@ const port = process.env.PORT || 5000;
 
 // middleware
 app.use(express.json());
-app.use(cors({
-    origin: [
-        "http://localhost:5173",
-        process.env.SITE_DOMAIN
-    ],
-    credentials: true
-}));
+app.use(cors());
 
 
 const admin = require("firebase-admin");
@@ -68,7 +62,7 @@ const client = new MongoClient(uri, {
 
 async function run() {
     try {
-        await client.connect();
+        // await client.connect();
         console.log("MongoDB Connected Successfully");
 
         const db = client.db('RedHope');
