@@ -352,7 +352,7 @@ async function run() {
 
 
 
-        app.get("/public/search-donors", verifyFBToken, async (req, res) => {
+        app.get("/public/search-donors", async (req, res) => {
             try {
                 const { bloodGroup, district, upazila } = req.query;
 
@@ -445,7 +445,7 @@ async function run() {
 
 
 
-        app.get("/donorRequest", verifyFBToken, async (req, res) => {
+        app.get("/donorRequest", async (req, res) => {
             try {
                 const {
                     email,
